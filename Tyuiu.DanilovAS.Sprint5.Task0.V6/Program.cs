@@ -33,9 +33,6 @@ namespace Tyuiu.DanilovAS.Sprint5.Task0.V6
             int x = 3;
             Console.WriteLine("x = " + x);
 
-
-
-
             Console.WriteLine();
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");

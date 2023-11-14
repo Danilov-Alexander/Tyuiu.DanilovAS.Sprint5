@@ -19,6 +19,7 @@ namespace Tyuiu.DanilovAS.Sprint5.Task0.V6.Lib
 
             string path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask0.txt";
             File.WriteAllText(path, Convert.ToString(y));
+
             return path;
         }
     }
