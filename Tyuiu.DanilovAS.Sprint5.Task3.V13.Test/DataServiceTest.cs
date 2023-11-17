@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
+using Tyuiu.DanilovAS.Sprint5.Task3.V13.Lib;
 using System.IO;
-using Tyuiu.DanilovAS.Sprint5.Task2.V24.Lib;
 
-namespace Tyuiu.DanilovAS.Sprint5.Task2.V24.Test
+namespace Tyuiu.DanilovAS.Sprint5.Task3.V13.Test
 {
     [TestClass]
     public class DataServiceTest
@@ -13,14 +13,13 @@ namespace Tyuiu.DanilovAS.Sprint5.Task2.V24.Test
         public void ValidSaveToFileTextData()
         {
             DataService ds = new DataService();
-            string path = @"C:\Users\User\source\repos\Tyuiu.DanilovAS.Sprint5\Tyuiu.DanilovAS.Sprint5.Task2.V24\bin\Debug\OutPutFileTask2.csv";
+            string path = @"C:\Users\User\source\repos\Tyuiu.DanilovAS.Sprint5\Tyuiu.DanilovAS.Sprint5.Task3.V13\bin\Debug\OutPutFileTask3.bin";
 
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
 
             bool wait = true;
             Assert.AreEqual(wait, fileExists);
-
         }
     }
 }
