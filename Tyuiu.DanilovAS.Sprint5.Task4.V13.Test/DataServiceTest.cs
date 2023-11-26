@@ -12,7 +12,7 @@ namespace Tyuiu.DanilovAS.Sprint5.Task4.V13.Test
         [TestMethod]
         public void CheckedExistsFile()
         {
-            string path = @"С:\DataSprint5\InPutDataFileTask4V13.txt";
+            string path = @"C:\DataSprint5\InPutDataFileTask4V13.txt";
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
             bool wait = true;

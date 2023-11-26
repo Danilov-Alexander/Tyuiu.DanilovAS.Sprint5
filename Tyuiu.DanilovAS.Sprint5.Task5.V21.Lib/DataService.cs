@@ -13,16 +13,21 @@ namespace Tyuiu.DanilovAS.Sprint5.Task5.V21.Lib
     {
         public double LoadFromDataFile(string path)
         {
-            double res = 0;
+            int res = 1;
+            string[] strNumbs = File.ReadAllLines(path);
+            int temp = int.MinValue;
+            foreach (string number in strNumbs)
 
-            using(StreamReader reader = new StreamReader(path))
-            {
-                string line;
-                while((line = reader.ReadLine()) != null)
+                if (!number.Contains(',') && int.Parse(number) % 2 == 0 && int.Parse(number) > temp)
                 {
-                    //Найти факториал наибольшего числа.
+                    temp = int.Parse(number);
                 }
+
+            for (int i = 1; i <= temp; i++)
+            {
+                res *= i;
             }
+
             return res;
         }
     }
