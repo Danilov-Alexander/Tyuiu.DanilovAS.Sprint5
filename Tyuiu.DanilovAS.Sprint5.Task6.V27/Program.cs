@@ -4,36 +4,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Tyuiu.DanilovAS.Sprint5.Task5.V21.Lib;
-using System.IO;
+using Tyuiu.DanilovAS.Sprint5.Task6.V27.Lib;
 
-namespace Tyuiu.DanilovAS.Sprint5.Task5.V21
+namespace Tyuiu.DanilovAS.Sprint5.Task6.V27
 {
     class Program
     {
         static void Main(string[] args)
         {
             DataService ds = new DataService();
-          
+            //Дан файл С:\DataSprint5\InPutDataFileTask6V27.txt (файл взять из архива согласно вашему варианту. Создать папку в ручную С:\DataSprint5\ и скопировать в неё файл)
+            //в котором есть набор символьных данных.Найти количество трехзначных чисел в заданной строке.
             Console.Title = "Спринт #5 | Выполнил: Данилов А. С. | ИСТНб-23-1";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #5                                                               *");
-            Console.WriteLine("* Тема: Чтение набора данных из текстового файла                          *");
-            Console.WriteLine("* Задание #5                                                              *");
-            Console.WriteLine("* Вариант #21                                                             *");
+            Console.WriteLine("* Тема: Обработка текстовых файлов                           			 *");
+            Console.WriteLine("* Задание #6                                                              *");
+            Console.WriteLine("* Вариант #27                                                             *");
             Console.WriteLine("* Выполнил: Данилов Александр Сергеевич | ИСТНб-23-1                      *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine(@"* Дан файл С:\DataSprint5\InPutDataFileTask5V21.txt Создать папку в      *");
-            Console.WriteLine(@"* ручную С:\DataSprint5\ и скопировать в неё файл) в котором есть набор  *");
-            Console.WriteLine("* значений. Найти факториал наибольшего целого числа, которое делится на 2*");
-            Console.WriteLine("* в файле. Полученный результат вывести на консоль.У вещественных значений*");
-            Console.WriteLine("* округлить до трёх знаков после запятой.                                 *");
+            Console.WriteLine(@"* Дан файл С:\DataSprint5\InPutDataFileTask6V27.txt в котором есть набор *");
+            Console.WriteLine("* символьных данных.Найти количество трехзначных чисел в заданной строке. *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
-            string path = @"С:\DataSprint5\InPutDataFileTask5V21.txt";
+            string path = @"C:\DataSprint5\InPutDataFileTask6V27.txt";
+
             Console.WriteLine("Данные находятся в файле: " + path);
 
             Console.WriteLine();
@@ -41,9 +39,10 @@ namespace Tyuiu.DanilovAS.Sprint5.Task5.V21
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-            double res = ds.LoadFromDataFile(path);
-            Console.WriteLine("Факториал наибольшего числа равен = " + res);
+            int res = ds.LoadFromDataFile(path);
+            Console.WriteLine("Всего трёхзначных чисел = " + res);
             Console.ReadKey();
+
         }
     }
 }
